@@ -45,6 +45,13 @@ class TextAdventureGame:
         event = random.choice(events)
         print(event)
         
+        if "energy potion" in event:
+            self.inventory.append("Energy Potion")
+            print("You put the energy Potion in your inventory.")
+        elif "mysterious map" in event:
+            self.inventory.append("Mysterious Map")
+            print("You put the Mysterious Map in your inventory.")
+        
         self.player_energy -= 20
         self.player_score += 5
         print(f"Your energy is now {self.player_energy}")
