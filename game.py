@@ -38,7 +38,9 @@ class TextAdventureGame:
         events = [
             "You find a small treasure!",
             "You encounter a friendly traveler.",
-            "You discover a hidden path." 
+            "You discover a hidden path.",
+            "You find a energy potion!",
+            "You find a mysterious map!"
         ]
         event = random.choice(events)
         print(event)
