@@ -19,7 +19,9 @@ class TextAdventureGame:
     def game_loop(self):
         while True:
             print(f"\nYou are in the {self.current_location}.")
-
+            print(f"Your energy: {self.player_energy}")
+            print(f"Your inventory: {', '.join(self.inventory) if self.inventory else 'Empty'}")
+            
             action = input("What would you like to do? (explore/rest/use item/quit): ").lower()
 
             if action == "explore":
