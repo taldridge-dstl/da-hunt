@@ -80,11 +80,11 @@ class TextAdventureGame:
         try:
             index = int(choice) - 1
             item = self.inventory.pop(index)
-            if item == "energy Potion":
+            if item == "Energy Potion":
                 self.player_energy += 50
                 if self.player_energy > 100:
                     self.player_energy = 100
-                print(f"You used the energy Potion. Your energy is now {self.player_energy}")
+                print(f"You used the Energy Potion. Your energy is now {self.player_energy}")
             elif item == "Mysterious Map":
                 new_locations = ["ancient ruins", "enchanted forest", "dragon's lair"]
                 self.current_location = random.choice(new_locations)
