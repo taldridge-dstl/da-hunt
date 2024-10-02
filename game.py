@@ -31,7 +31,7 @@ class TextAdventureGame:
         events = ["You find a small treasure!", "You encounter a friendly traveler.", "You discover a hidden path."]
         event = random.choice(events)
         print(event)
-        self.player_energy -= 10
+        self.player_energy -= 20
         print(f"Your energy is now {self.player_energy}")
 
     def rest(self):
