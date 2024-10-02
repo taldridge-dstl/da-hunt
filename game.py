@@ -4,7 +4,10 @@ class TextAdventureGame:
     def __init__(self):
         self.player_name = ""
         self.player_energy = 100
+        self.player_score = 0
         self.current_location = "village"
+        
+        self._score_threshold = 50
 
     def start_game(self):
         print("Welcome to the Data Academy Text Adventure!")
@@ -26,12 +29,17 @@ class TextAdventureGame:
                 break
             else:
                 print("Invalid action. Try again.")
+                
+            if self.player_score >= self._score_threshold:
+                print("You win!")
+                break
 
     def explore(self):
         events = ["You find a small treasure!", "You encounter a friendly traveler.", "You discover a hidden path."]
         event = random.choice(events)
         print(event)
         self.player_energy -= 20
+        self.player_score += 5
         print(f"Your energy is now {self.player_energy}")
 
     def rest(self):
